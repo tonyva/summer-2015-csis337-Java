@@ -1,5 +1,14 @@
 package lab01b;
 
+/**
+ * JavaFX02 - This is an example of a basic Java FX program
+ *   that creates a window where we draw things.
+ *   
+ * Note the use of the Application class and the use of 
+ * the Stage and Scene classes.
+ * 
+ */
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
