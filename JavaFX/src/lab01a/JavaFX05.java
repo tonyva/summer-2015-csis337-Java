@@ -1,7 +1,7 @@
 package lab01a;
 
 /**
- * JavaFX03 - This is an example of a basic Java FX program
+ * JavaFX05 - This is an example of a basic Java FX program
  *   that creates a window with a scene various 2D shapes.
  *   
  * 
