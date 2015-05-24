@@ -145,7 +145,7 @@ public class JavaFX05 extends Application {
 		myshapes[4] = t2;
 
 		
-		
+		/* Add all the shapes to the window. */
 		for (Shape s : myshapes)
 			obs.add( s );
 	}
