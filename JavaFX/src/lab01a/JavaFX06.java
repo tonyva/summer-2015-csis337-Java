@@ -1,7 +1,7 @@
 package lab01a;
 
 /**
- * JavaFX04 - This is an example of a basic Java FX program
+ * JavaFX06 - This is an example of a basic Java FX program
  *   that creates a window with a scene various 2D shapes.
  *   
  * 
@@ -17,6 +17,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Menu;
 import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
+import javafx.scene.effect.GaussianBlur;
 import javafx.event.ActionEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.event.EventHandler;
@@ -26,16 +27,17 @@ import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 
 
 
 
-public class JavaFX04 extends Application {
+public class JavaFX06 extends Application {
 	/**
 	 * Data members of the class
 	 */
 	private static final long serialVersionUID = 1L;
-	private final String TITLE = "Simple JavaFX Example with Shapes";
+	private final String TITLE = "Simple JavaFX Example with Shapes controlled by GUI";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;
 
@@ -54,6 +56,16 @@ public class JavaFX04 extends Application {
 	 */
 	private final int number_shapes = 5;
 	private Shape[]   myshapes = new Shape[ number_shapes ];
+
+	/*
+	 * Text font and glyph
+	 */
+	private final String text1 = "CSIS 337";
+	private final String text2 = "Computer Graphics";
+	private int font_size = 80;
+	private final Font font1 = new Font( "Arial", font_size );
+	private final Font font2 = new Font( "Times", font_size/2 );
+
 	
 	@Override
 	public void start(Stage primaryStage) {
@@ -109,23 +121,31 @@ public class JavaFX04 extends Application {
 		Line line2 = new Line( 0, minY, 0, 200);
 		
 		/* Rectangles */
-		Rectangle rectangle1 = new Rectangle(75,minY,40,50);
+		Rectangle rectangle1 = new Rectangle(275,minY,40,50);
 		rectangle1.setFill(Color.GREEN);
 		Rectangle rectangle2 = new Rectangle(50,75,60,50);
 		rectangle2.setArcWidth(30);
 		rectangle2.setArcHeight(30);
 		rectangle2.setFill(Color.RED);
-		Ellipse ellipse = new Ellipse(205,150,70,100);
+		Ellipse ellipse = new Ellipse(205,150,70,30);
 		ellipse.setFill(Color.BLUE);
-		
+
+		/* Create Text Objects */
+		Text t1 = new Text( 15, 240, text1 );
+		t1.setFont( font1 );
+		t1.setEffect( new GaussianBlur() );
+		Text t2 = new Text( 15, 290, text2 );
+		t2.setFont( font2 );
+
 		/* Polymorphism!! */
-		myshapes[0] = line1;
-		myshapes[1] = line2;
-		myshapes[2] = rectangle1;
-		myshapes[3] = rectangle2;
-		myshapes[4] = ellipse;
+		myshapes[0] = rectangle1;
+		myshapes[1] = rectangle2;
+		myshapes[2] = ellipse;
+		myshapes[3] = t1;
+		myshapes[4] = t2;
+
 		
-		
+		/* Add all the shapes to the window. */
 		for (Shape s : myshapes)
 			obs.add( s );
 	}
