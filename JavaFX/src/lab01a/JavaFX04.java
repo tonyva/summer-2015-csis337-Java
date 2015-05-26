@@ -25,7 +25,6 @@ import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
-import javafx.scene.text.Font;
 
 
 
@@ -55,6 +54,9 @@ public class JavaFX04 extends Application {
 	private final int number_shapes = 5;
 	private Shape[]   myshapes = new Shape[ number_shapes ];
 	
+	/**
+	 * The start method is where we will set up the menus
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -95,6 +97,12 @@ public class JavaFX04 extends Application {
 		}		
 	}
 
+	/**
+	 * The addShapes method is where we will set up all the nodes
+	 *   to be drawn. All of the 2-D Shape objects like Line, Rectangle,
+	 *   and Ellipse inherit from Node - lots of polymorphism used
+	 *   here.
+	 */
 	private void addShapes(ObservableList<Node> obs) {
 		myshapes = new Shape[ number_shapes ];
 		

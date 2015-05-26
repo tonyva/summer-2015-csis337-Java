@@ -15,6 +15,10 @@ import javafx.scene.layout.BorderPane;
 
 
 public class JavaFX01 extends Application {
+	
+	/**
+	 * The start method is where the window gets set up
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -30,7 +34,11 @@ public class JavaFX01 extends Application {
 		}
 	}
 	
+	/**
+	 * main - this is where the program begins
+	 * @param args
+	 */
 	public static void main(String[] args) {
-		launch(args);
+		Application.launch(args);
 	}
 }

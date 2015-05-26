@@ -118,7 +118,6 @@ public class JavaFX06 extends Application {
 		line1.setStartY( minY );
 		line1.setEndX(200.0f);
 		line1.setEndY( minY );
-		Line line2 = new Line( 0, minY, 0, 200);
 		
 		/* Rectangles */
 		Rectangle rectangle1 = new Rectangle(275,minY,40,50);

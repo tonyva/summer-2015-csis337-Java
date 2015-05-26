@@ -25,6 +25,9 @@ public class JavaFX02 extends Application {
 	private final int SCENE_HEIGHT = 300;
 
 
+	/**
+	 * The start method is where the window gets set up
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -40,6 +43,10 @@ public class JavaFX02 extends Application {
 		}		
 	}
 
+	/**
+	 * main - this is where the program begins
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}

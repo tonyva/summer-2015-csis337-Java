@@ -58,7 +58,7 @@ public class JavaFX05 extends Application {
 	private Shape[]   myshapes = new Shape[ number_shapes ];
 
 	/*
-	 * Text font and glyph
+	 * Text and fonts
 	 */
 	private final String text1 = "CSIS 337";
 	private final String text2 = "Computer Graphics";
@@ -118,7 +118,6 @@ public class JavaFX05 extends Application {
 		line1.setStartY( minY );
 		line1.setEndX(200.0f);
 		line1.setEndY( minY );
-		Line line2 = new Line( 0, minY, 0, 200);
 		
 		/* Rectangles */
 		Rectangle rectangle1 = new Rectangle(275,minY,40,50);

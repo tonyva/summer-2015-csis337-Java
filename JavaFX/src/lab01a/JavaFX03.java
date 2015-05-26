@@ -49,6 +49,9 @@ public class JavaFX03 extends Application {
 	private MenuBar menubar;
 	
 	
+	/**
+	 * The start method is where we will set up the menus
+	 */
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -72,7 +75,10 @@ public class JavaFX03 extends Application {
 			/* Add the menu bar to the scene */
 			root.setTop( menubar );
 			
-			/* Set the response to Exit menu item */
+			/* Set the response to Exit menu item
+			 *   This is like having Swing's addActionListener and
+			 *   the actionPerformed method all in one place 
+			 */
 			fileMenuItems[1].setOnAction( new EventHandler<ActionEvent>(){
 				@Override
 				public void handle(ActionEvent event) {
