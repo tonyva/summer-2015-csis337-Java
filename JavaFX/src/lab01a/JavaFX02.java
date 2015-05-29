@@ -19,7 +19,8 @@ public class JavaFX02 extends Application {
 	/**
 	 * Data members of the class
 	 */
-	private static final long serialVersionUID = 1L;
+	// generates a warning, not necessary:
+	// private static final long serialVersionUID = 1L;
 	private final String TITLE = "Simple JavaFX Example";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;

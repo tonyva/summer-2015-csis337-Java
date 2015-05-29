@@ -36,7 +36,8 @@ public class JavaFX06 extends Application {
 	/**
 	 * Data members of the class
 	 */
-	private static final long serialVersionUID = 1L;
+	// generates a warning, not necessary:
+	// private static final long serialVersionUID = 1L;
 	private final String TITLE = "Simple JavaFX Example with Shapes controlled by GUI";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;
@@ -87,7 +88,7 @@ public class JavaFX06 extends Application {
 			menubar = new MenuBar();
 			menubar.getMenus().addAll( fileMenu, editMenu );
 			
-			/* Add the menu bar to the scene */
+			/* Add the menu bar to the window */
 			root.setTop( menubar );
 			
 			/* Set the response to Exit menu item */
@@ -120,14 +121,16 @@ public class JavaFX06 extends Application {
 		line1.setEndY( minY );
 		
 		/* Rectangles */
-		Rectangle rectangle1 = new Rectangle(275,minY,40,50);
+		Rectangle rectangle1 = new Rectangle(175,minY,40,50);
 		rectangle1.setFill(Color.GREEN);
-		Rectangle rectangle2 = new Rectangle(50,75,60,50);
+		Rectangle rectangle2 = new Rectangle(50,175,160,50);
 		rectangle2.setArcWidth(30);
 		rectangle2.setArcHeight(30);
 		rectangle2.setFill(Color.RED);
-		Ellipse ellipse = new Ellipse(205,150,70,30);
-		ellipse.setFill(Color.BLUE);
+		Ellipse ellipse = new Ellipse(205,150,70,50);
+		double alpha_value = 0.5;
+		Color myColor = new Color( 0.0, 0.0, 1.0, alpha_value );
+		ellipse.setFill(myColor);
 
 		/* Create Text Objects */
 		Text t1 = new Text( 15, 240, text1 );

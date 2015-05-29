@@ -33,7 +33,8 @@ public class JavaFX03 extends Application {
 	/**
 	 * Data members of the class
 	 */
-	private static final long serialVersionUID = 1L;
+	// generates a warning, not necessary:
+	// private static final long serialVersionUID = 1L;
 	private final String TITLE = "Simple JavaFX Example with Menus";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;
@@ -72,7 +73,7 @@ public class JavaFX03 extends Application {
 			menubar = new MenuBar();
 			menubar.getMenus().addAll( fileMenu, editMenu );
 			
-			/* Add the menu bar to the scene */
+			/* Add the menu bar to the window */
 			root.setTop( menubar );
 			
 			/* Set the response to Exit menu item
