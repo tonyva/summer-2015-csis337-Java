@@ -2,7 +2,7 @@ package lab02c;
 
 /**
  * Java02e - This is an example of a basic JavaFX program with 2D shapes
- *           - Path and SVGPath
+ *           - Path
  *   
  * For more details see:
  * https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/package-summary.html
