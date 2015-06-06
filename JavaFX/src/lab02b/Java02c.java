@@ -58,8 +58,9 @@ public class Java02c extends Application {
 			Scene scene = new Scene(root,SCENE_WIDTH,SCENE_HEIGHT);
 			wlist = root.getChildren();
 
-			rectangle.setFill(Color.GREEN);
+			rectangle.setFill( Color.GREEN );
 			wlist.add( rectangle );
+
 			circle.setFill( Color.BLUE );
 			wlist.add( circle );
 			
