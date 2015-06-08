@@ -182,8 +182,11 @@ public class Java02i extends Application {
     	path.setStrokeLineCap ( lineCap );
     	path.setStrokeLineJoin( lineJoin );
     }
-	/*
-	 * Creates a StackPane for the center region
+
+    
+    
+    /*
+	 * Create a FlowPane for the center region
 	 */
     private FlowPane addCenterPane() {
        FlowPane box = new FlowPane();
