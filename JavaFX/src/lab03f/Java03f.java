@@ -17,9 +17,10 @@ import javafx.stage.Stage;
  *
  */
 public class Java03f extends Application {
-	/**
-	 * 
+	/*
+	 *  Data members
 	 */
+	private final String TITLE = "Java03f: JavaFX 2D Game Example";
 	//private static final long serialVersionUID = 1L;
 	
 	@Override
@@ -55,6 +56,7 @@ public class Java03f extends Application {
 			}
 		});
 
+		primaryStage.setTitle( TITLE );
 		primaryStage.setScene(scene);
 		primaryStage.show();
 	}

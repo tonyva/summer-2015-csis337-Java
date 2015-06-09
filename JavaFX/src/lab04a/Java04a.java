@@ -19,6 +19,9 @@ import javafx.scene.text.Text;
 
 public class Java04a extends Application {
 	
+	
+	private final String TITLE = "Java04a: JavaFX 3D Capability Check";
+	
 	/**
 	 * The start method is where the window gets set up
 	 */
@@ -32,6 +35,7 @@ public class Java04a extends Application {
 			threed.setFont(Font.font("Arial", FontWeight.BOLD, 40));
 			root.getChildren().add( threed );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 		} catch(Exception e) {
