@@ -1,8 +1,8 @@
 package lab02a;
 
 /**
- * Java02a - This is an example of a basic JavaFX program with 2D shapes
- * 			 and affine transforms.
+ * Java02b - This is an example of a basic JavaFX program with 2D shapes
+ * 			 and a basic transforms.
  *   
  * For more details see:
  * http://docs.oracle.com/javase/8/javafx/api/javafx/scene/transform/Affine.html
