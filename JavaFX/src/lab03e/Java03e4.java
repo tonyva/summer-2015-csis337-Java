@@ -43,6 +43,7 @@ import javafx.stage.Stage;
 
 public class Java03e4 extends Application {
 	
+	private final String TITLE = "Java03e3: JavaFX AnimationTimer example";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	
@@ -94,6 +95,7 @@ public class Java03e4 extends Application {
 			root.setCenter( addCenterPane() );
 			root.setBottom( addBottomBox() );
 
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
