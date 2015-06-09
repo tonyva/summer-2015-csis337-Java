@@ -37,7 +37,7 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 public class Java02i extends Application {
-	
+	private final String TITLE = "Java02i: JavaFX Example with 2D lines";
 	private final int SCENE_WIDTH  = 700;
 	private final int SCENE_HEIGHT = 300;
 
@@ -80,6 +80,7 @@ public class Java02i extends Application {
 			root.setLeft( addLeftBox() );
 			root.setCenter( addCenterPane() );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

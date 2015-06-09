@@ -27,6 +27,7 @@ import javafx.stage.Stage;
 
 public class Java02d extends Application {
 	
+	private final String TITLE = "Java02d: JavaFX Quadratic and Cubic curves";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private QuadCurve	quadc = new QuadCurve( );
@@ -66,6 +67,8 @@ public class Java02d extends Application {
 			VBox box   = addLeftBox();
 			root.setLeft( box );
 			
+			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

@@ -31,6 +31,7 @@ import javafx.stage.Stage;
 
 public class Java03a extends Application {
 	
+	private final String TITLE = "Java03a: JavaFX Example with textures using images and transformations";
 	private final int SCENE_WIDTH  = 600;
 	private final int SCENE_HEIGHT = 400;
 	private final int ERX    = 100;
@@ -73,7 +74,7 @@ public class Java03a extends Application {
 			root.setCenter( addCenterPane() );
 			
 
-			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

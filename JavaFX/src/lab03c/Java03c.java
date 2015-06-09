@@ -43,6 +43,8 @@ import javafx.stage.Stage;
 
 public class Java03c extends Application {
 	
+	private final String TITLE = "Java03c: JavaFX Example with Colors and Opacity";
+	
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private final int WIDTH  = 175;
@@ -84,6 +86,7 @@ public class Java03c extends Application {
 			root.setCenter( addCenterPane() );
 			root.setBottom( addBottomBox() );
 
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

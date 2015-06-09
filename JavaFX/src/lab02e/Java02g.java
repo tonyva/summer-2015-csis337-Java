@@ -2,7 +2,7 @@ package lab02e;
 
 /**
  * Java02g - This is an example of a basic JavaFX program with 2D shapes
- * 			 and Gradient colors
+ * 			 and Gradient paints
  *   
  * For more details see:
  * https://docs.oracle.com/javase/8/javafx/api/javafx/scene/paint/Paint.html
@@ -36,6 +36,7 @@ import javafx.stage.Stage;
 
 public class Java02g extends Application {
 	
+	private final String TITLE = "Java02g: JavaFX Example with Gradient paints";
 	private final int SCENE_WIDTH  = 700;
 	private final int SCENE_HEIGHT = 300;
 	private final int RX = 75;
@@ -82,6 +83,7 @@ public class Java02g extends Application {
 			root.setLeft( addLeftBox() );
 			root.setCenter( addCenterPane() );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

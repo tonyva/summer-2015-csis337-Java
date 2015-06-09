@@ -30,6 +30,7 @@ import javafx.stage.Stage;
 
 public class Java02f extends Application {
 	
+	private final String TITLE = "Java02f: JavaFX Example with shapes and colors";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private final int WIDTH  = 175;
@@ -55,6 +56,7 @@ public class Java02f extends Application {
 			root.setLeft( addLeftBox() );
 			root.setCenter( addCenterPane() );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

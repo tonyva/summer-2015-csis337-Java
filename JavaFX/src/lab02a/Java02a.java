@@ -2,7 +2,7 @@ package lab02a;
 
 /**
  * Java02a - This is an example of a basic JavaFX program with 2D shapes
- * 			 and an affine transforms.
+ * 			 and a transforms.
  *   
  * For more details see:
  * http://docs.oracle.com/javase/8/javafx/api/javafx/scene/transform/Affine.html
@@ -21,6 +21,8 @@ import javafx.scene.transform.Shear;
 import javafx.stage.Stage;
 
 public class Java02a extends Application {
+
+	private final String TITLE = "Java02a: JavaFX Example with a 2D shapes and transform";
 
 	@Override
 	public void start(Stage primaryStage) {
@@ -54,6 +56,7 @@ public class Java02a extends Application {
 			// rectangle2.setScaleY( 0.7 );
 			// rectangle2.getTransforms().add( new Shear( 0.1, 0.1 ) );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

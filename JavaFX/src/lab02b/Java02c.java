@@ -37,6 +37,7 @@ import javafx.stage.Stage;
 
 public class Java02c extends Application {
 	
+	private final String TITLE = "Java02d: JavaFX area Intersect, Subtract and Union";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private final int RectangleX =  SCENE_WIDTH/2;
@@ -71,6 +72,7 @@ public class Java02c extends Application {
 			root.setLeft( leftbox );
 			root.setCenter( centerbox );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

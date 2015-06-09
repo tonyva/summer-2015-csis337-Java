@@ -31,6 +31,7 @@ import javafx.stage.Stage;
 
 public class Java02b extends Application {
 	
+	private final String TITLE = "Java02b: JavaFX Example with basic transforms";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private final int RectangleX =  SCENE_WIDTH/2;
@@ -64,6 +65,7 @@ public class Java02b extends Application {
 			root.setLeft( leftbox );
 			root.setCenter( centerbox );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

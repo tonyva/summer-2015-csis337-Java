@@ -21,6 +21,7 @@ import javafx.stage.Stage;
 
 public class Java02h extends Application {
 	
+	private final String TITLE = "Java02h: JavaFX Example with textures using image files";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private final int ERX    = 100;
@@ -84,6 +85,7 @@ public class Java02h extends Application {
 			wlist.add( oval );
 			wlist.add( hexagon );
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

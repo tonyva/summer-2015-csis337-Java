@@ -25,6 +25,7 @@ import javafx.stage.Stage;
 
 public class Java02e extends Application {
 	
+	private final String TITLE = "Java02e: JavaFX Path Example";
 	private final int SCENE_WIDTH  = 400;
 	private final int SCENE_HEIGHT = 300;
 	private Path        path  = new Path();
@@ -172,7 +173,7 @@ public class Java02e extends Application {
 			
 			path.setStrokeWidth( 5 );
 			
-			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

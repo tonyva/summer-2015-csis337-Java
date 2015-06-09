@@ -36,6 +36,8 @@ import javafx.stage.Stage;
 
 public class Java03b extends Application {
 	
+	private final String TITLE = "Java03b: JavaFX Example with multiple transforms";
+	
 	private final int SCENE_WIDTH  = 600;
 	private final int SCENE_HEIGHT = 400;
 	private final int ECX    = 100;
@@ -105,7 +107,7 @@ public class Java03b extends Application {
 			oval3Xforms.add( tx2 );
 			oval3Xforms.add( tx1 );
 			
-			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
