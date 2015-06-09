@@ -35,7 +35,7 @@ public class JavaFX03 extends Application {
 	 */
 	// generates a warning, not necessary:
 	// private static final long serialVersionUID = 1L;
-	private final String TITLE = "Simple JavaFX Example with Menus";
+	private final String TITLE = "JavaFX03: Simple JavaFX Example with Menus";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;
 

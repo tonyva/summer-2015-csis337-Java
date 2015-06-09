@@ -22,6 +22,8 @@ import javafx.stage.Stage;
 
 public class JavaFXb01 extends Application {
 
+	private final String TITLE = "JavaFXb01: JavaFX Example with a Button";
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -42,6 +44,7 @@ public class JavaFXb01 extends Application {
 			*/
 			
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 

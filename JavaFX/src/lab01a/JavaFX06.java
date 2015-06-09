@@ -38,7 +38,7 @@ public class JavaFX06 extends Application {
 	 */
 	// generates a warning, not necessary:
 	// private static final long serialVersionUID = 1L;
-	private final String TITLE = "Simple JavaFX Example with Shapes controlled by GUI";
+	private final String TITLE = "JavaFX06: Simple JavaFX Example with Shapes controlled by GUI";
 	private final int SCENE_WIDTH = 400;
 	private final int SCENE_HEIGHT = 300;
 

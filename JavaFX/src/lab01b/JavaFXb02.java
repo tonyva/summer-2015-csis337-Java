@@ -1,7 +1,7 @@
 package lab01b;
 
 /**
- * JavaFXb01 - This is an example of a basic Java FX program
+ * JavaFXb02 - This is an example of a basic Java FX program
  *   that uses the built-in BorderPane layout.
  *   
  * For more details see:
@@ -26,6 +26,9 @@ import javafx.stage.Stage;
 
 public class JavaFXb02 extends Application {
 
+	private final String TITLE = "JavaFXb02: JavaFX Example with a BorderPane layout";
+
+	
 	@Override
 	public void start(Stage primaryStage) {
 		try {
@@ -43,6 +46,7 @@ public class JavaFXb02 extends Application {
 			Scene scene = new Scene(root,400,400);
 			ObservableList<Node> list = root.getChildren();
 			
+			primaryStage.setTitle( TITLE );
 			primaryStage.setScene(scene);
 			primaryStage.show();
 
