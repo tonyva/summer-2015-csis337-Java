@@ -1,8 +1,7 @@
 package lab04d;
 
 /**
- * Java04d - This is an example of a basic JavaFX program with
- *            programmer-defined 3D shapes using TiangleMesh
+ * Java04d - JavaFX program with programmer-defined 3D shapes using TiangleMesh
  *   
  * For more details see:
  * https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/TriangleMesh.html
@@ -15,7 +14,6 @@ import javafx.animation.KeyValue;
 import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
-import javafx.geometry.Point2D;
 import javafx.geometry.Point3D;
 import javafx.geometry.Pos;
 import javafx.scene.Group;
@@ -29,7 +27,6 @@ import javafx.scene.paint.PhongMaterial;
 import javafx.scene.shape.Box;
 import javafx.scene.shape.MeshView;
 import javafx.scene.shape.TriangleMesh;
-import javafx.scene.shape.VertexFormat;
 import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
