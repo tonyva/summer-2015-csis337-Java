@@ -1,7 +1,7 @@
-package lab05a;
+package lab05b;
 
 /**
- * Java05a2 - JavaFX program with colors for custom 3D shapes
+ * Java05b - JavaFX program with a canvas image mapped onto a 3D shape
  *   
  * For more details see:
  * https://docs.oracle.com/javase/8/javafx/api/javafx/scene/shape/TriangleMesh.html
@@ -20,10 +20,11 @@ import javafx.scene.AmbientLight;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.PerspectiveCamera;
-import javafx.scene.PointLight;
 import javafx.scene.Scene;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
@@ -38,9 +39,9 @@ import javafx.scene.transform.Rotate;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Java05a2 extends Application {
+public class Java05b extends Application {
 	
-	private final String TITLE = "Java05a2: Colors on 2D and 3D Shapes with a difference";
+	private final String TITLE = "Java05b: image mapped onto a 3D Mesh Shape";
 	private final int SCENE_WIDTH  = 600;
 	private final int SCENE_HEIGHT = 300;
 
@@ -60,7 +61,7 @@ public class Java05a2 extends Application {
 			ObservableList<Node> list = root.getChildren();
 			
 			list.add( addPane() );
-			
+						
 			if (enableDepthBuffer){
 				PerspectiveCamera cam = new PerspectiveCamera();
 				// Position the camera to the left, up a little and back a bit
@@ -113,6 +114,7 @@ public class Java05a2 extends Application {
 	    rAnimation.setCycleCount(Animation.INDEFINITE);
 	    rAnimation.play();
 
+		
 		list.add( things );
 		return box;
 	}
@@ -229,36 +231,30 @@ public class Java05a2 extends Application {
 		 * mesh is done - set it in the MeshView object
 		 */
 		meshview.setMesh( mesh );
-		PhongMaterial mymatcolor = new PhongMaterial();
-		mymatcolor.setDiffuseColor( Color.RED );
-		meshview.setMaterial( mymatcolor );
-		meshview.setTranslateX( 20 );
-		meshview.setTranslateY( 20 );
-		meshview.setTranslateZ( 20 );
 		
-		
-		// Create a Canvas object to set up an ImagePattern
+		// Create a Canvas object to set up an Image object
 		final int canvasW = 256;
 		final int canvasH = 256;
-		Canvas canvas = new Canvas( canvasW, canvasH );
-		GraphicsContext gc = canvas.getGraphicsContext2D();
+		Canvas c = new Canvas( canvasW, canvasH );
+		GraphicsContext gc = c.getGraphicsContext2D();
 		LinearGradient lg = new LinearGradient(0, 0, canvasW, canvasH,
                 false, CycleMethod.NO_CYCLE,
                 new Stop(0, Color.RED  ),
                 new Stop(1, Color.BLUE ));
 		gc.setFill( lg );
 		gc.fillOval(0, 0, 256, 256);
-		canvas.setTranslateX( -100 );
-		canvas.setTranslateY( -100 );
-		canvas.setTranslateZ( 150 );
+		Image myimage = c.snapshot(new SnapshotParameters(), null);
 
+		PhongMaterial mymaterial = new PhongMaterial(); mymaterial.setDiffuseMap( myimage );
+		meshview.setMaterial( mymaterial );
+		
 		/*
 		 * Add an ambient light source
 		 */
 		AmbientLight light = new AmbientLight();
 		//PointLight light = new PointLight();
 		
-		Group result = new Group( meshview, canvas, light );
+		Group result = new Group( meshview, light );
 		return result;
 	}
 

@@ -90,7 +90,7 @@ public class Java05a1 extends Application {
 		 * Nodes in this scene
 		 */
 		final Point3D CuboidP1 = new Point3D( 200, 120, 100);
-		Group cuboid = createRectangle( CuboidP1 );
+		Group cuboid = createCuboid( CuboidP1 );
 		
 		// Use 3-d boxes - long narrow ones - for each of the three axes.
 		Box xaxis = new Box(300,   2,   2);
@@ -123,7 +123,7 @@ public class Java05a1 extends Application {
 	 *  x, y, and z components are the width, height and depth of the cuboid.
 	 *   
 	 */
-	private Group createRectangle( Point3D p1 ) {
+	private Group createCuboid( Point3D p1 ) {
 		MeshView meshview = new MeshView();
 		TriangleMesh mesh = new TriangleMesh(); 
 		/*
