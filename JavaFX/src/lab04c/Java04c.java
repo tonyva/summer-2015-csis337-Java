@@ -161,9 +161,11 @@ public class Java04c extends Application {
 		 * Need texture coordinates even if we don't have texture
 		 * Map the 3 vertices in the trianglepoints array to the 
 		 * 2D unit square ( (0,0), (1,0), (1,1), (0,1) )
-		 * 
-		 *             t0
 		 *  0,0 ---------------- 1,0
+		 *      |              |
+		 *      |              |
+		 *      |              |
+		 *      |      t0      |
 		 *      |      /\      |
 		 *      |     /  \     |
 		 *      |    /    \    |
