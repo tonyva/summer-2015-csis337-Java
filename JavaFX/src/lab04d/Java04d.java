@@ -177,10 +177,10 @@ public class Java04d extends Application {
 			x, y, z,   // p1
 			0, 0, z,   // p2
 			x, y, 0,   // p3
-			0, y, z,   // p0
-			x, 0, z,   // p1
-			0, y, 0,   // p2
-			x, 0, 0    // p3
+			0, y, z,   // p4
+			x, 0, z,   // p5
+			0, y, 0,   // p6
+			x, 0, 0    // p7
 		};
 		
 		/*
