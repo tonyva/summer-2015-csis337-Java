@@ -183,8 +183,11 @@ public class Java03e4 extends Application {
      * Our thread class
      */
     class Animate extends AnimationTimer{
+    	private long oldt = 0;
 		public void handle( long t) {
-			//System.out.println("Frame time is " + t * 1e6 + " milliseconds.");
+			long diff = t - oldt;
+			oldt = t;
+			//System.out.println("Frame time is " + diff * 1e6 + " milliseconds.");
 			// Figure out the current size of the pane
 			maxX = oval.getParent().getBoundsInLocal().getMaxX();
 			ovalmaxX = oval.getBoundsInParent().getMaxX();
