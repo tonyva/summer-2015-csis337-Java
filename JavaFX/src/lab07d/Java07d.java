@@ -85,12 +85,9 @@ public class Java07d extends Application {
 	        
 			if (enableDepthBuffer){
 				PerspectiveCamera cam = new PerspectiveCamera();
-				// Position the camera up a little and back a bit
-				//  mainly so that we can see all three axes and
-				//  the other objects  
-				cam.setTranslateX( -100 );
+				// Position the camera up and back a bit
 				cam.setTranslateY( -10 );
-				cam.setTranslateZ( -100 );
+				cam.setTranslateZ( -50 );
 				scene.setCamera( cam );
 			}
 			primaryStage.setScene(scene);
@@ -174,6 +171,8 @@ public class Java07d extends Application {
 
 		// group the elements
 		Group things = new Group( message, rectangle, sphere, xaxis, yaxis, zaxis );
+		things.setTranslateX(SCENE_WIDTH/2);
+		things.setTranslateY(SCENE_HEIGHT/2);
 		things.getTransforms().add(rotate);
 		
 	    // rotate animation - timeline affects the rotation angle
