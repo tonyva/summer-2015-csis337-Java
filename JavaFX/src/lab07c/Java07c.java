@@ -45,6 +45,8 @@ public class Java07c extends Application {
 	private final String directory = "file:src/lab04b/"; // where the image is
 	private final String file      = "UWRFLogo.jpg"; // name of image file
 	private final String filename  = directory + file;
+	private final Image        rim  = new Image(filename);
+	private final ImagePattern rimp = new ImagePattern( rim, 0, 0, rim.getWidth(), rim.getHeight(), false );
 	private Rotate rotate = new Rotate(0, 0, 0, 0, Rotate.Y_AXIS );
 
 	private boolean enableDepthBuffer = true;
@@ -123,11 +125,14 @@ public class Java07c extends Application {
 		SequentialTransition seqt = new SequentialTransition( sphere, timeline, pt, st );
 		seqt.play();
 		
-		Image rim = new Image(filename);
-		Rectangle rectangle = new Rectangle(0, 0, rim.getWidth(), rim.getHeight() );
+		
+		Rectangle rectangle = new Rectangle(0, 0, rimp.getWidth(), rimp.getHeight() );
 		rectangle.setTranslateX(180);
-		rectangle.setFill( new ImagePattern( rim, 0, 0, rim.getWidth(), rim.getHeight(), false ) );
-
+		rectangle.setFill( rimp );
+		rectangle.setArcHeight(25);
+		rectangle.setArcWidth(25);
+		
+		
 		// Use 3-d boxes - long narrow ones - for each of the three axes.
 		Box xaxis = new Box(300,   2,   2);
 		Box yaxis = new Box(  2, 300,   2);
