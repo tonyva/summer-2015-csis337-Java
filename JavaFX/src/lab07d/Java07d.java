@@ -118,7 +118,7 @@ public class Java07d extends Application {
 		// Text
 		message.setFont(Font.font("Arial", FontWeight.BOLD, 40 ));
 		message.setText("Count");
-		message.setTranslateX( 3*SCENE_WIDTH/4  );
+		message.setTranslateX( SCENE_WIDTH/4  );
 		message.setStroke( Color.BLUE );
 		
 		// Rectangle
@@ -179,7 +179,7 @@ public class Java07d extends Application {
 	    Timeline rAnimation = new Timeline();
 	    rAnimation.getKeyFrames().addAll( new KeyFrame( Duration.seconds( 20), new KeyValue( rotate.angleProperty(), 360 ) ) );
 	    rAnimation.setCycleCount(Animation.INDEFINITE);
-//	    rAnimation.play();
+	    rAnimation.play();
 
 	    list.add( things );
 		return box;
